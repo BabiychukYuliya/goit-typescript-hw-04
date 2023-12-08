@@ -11,8 +11,8 @@ export function Observer({ children, onContentEndVisible }: Props) {
   const endContentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-    const options = {
+    const options: IntersectionObserverInit = {
+      // Встановлюємо тип для параметру options
       rootMargin: "0px",
       threshold: 1.0,
       root: null,
